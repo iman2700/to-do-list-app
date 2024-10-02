@@ -1,13 +1,13 @@
 ﻿import { Test, TestingModule } from '@nestjs/testing';
  
 import { CommandBus, QueryBus } from '@nestjs/cqrs';
-import {TodoListController} from "../src/todo/todo-list.controller";
-import {CreateTodoListCommand} from "../src/todo/commands/create-todo-list.command";
-import {UpdateTodoListCommand} from "../src/todo/commands/update-todo-list.command";
-import {DeleteTodoListCommand} from "../src/todo/commands/delete-todo-list.command";
-import {GetAllTodoListsForUserQuery} from "../src/todo/queries/get-all-todo-lists-for-user.query";
+import {TodoListController} from "./todo-list.controller";
+import {CreateTodoListCommand} from "./commands/create-todo-list.command";
+import {UpdateTodoListCommand} from "./commands/update-todo-list.command";
+import {DeleteTodoListCommand} from "./commands/delete-todo-list.command";
+import {GetAllTodoListsForUserQuery} from "./queries/get-all-todo-lists-for-user.query";
+import {TodoList} from "../schemas/todolist.schema";
  
-
 describe('TodoListController', () => {
     let controller: TodoListController;
     let commandBus: CommandBus;
